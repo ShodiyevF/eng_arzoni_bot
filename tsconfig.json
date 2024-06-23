@@ -32,6 +32,7 @@
       "@config/*": ["src/config/*"],
       "@database/*": ["src/database/*"],
       "@scene/*": ["src/scene/*"],
+      "@helper/*": ["src/helper/*"],
       "@module/*": ["src/module/*"],
       "@customTypes/*": ["src/types/*"],
       "@lib/*": ["src/lib/*"]
