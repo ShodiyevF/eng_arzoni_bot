@@ -47,13 +47,17 @@ scene.step(async ctx => {
     const inputVideoPath = filePath
     const outputVideoPath = path.join(process.cwd(), `${filePath.split('/').pop()}_output.mp4`);
     
-    await resizeVideo(inputVideoPath, outputVideoPath)
+    try {
+        await resizeVideo(inputVideoPath, outputVideoPath)
 
-    await ctx.api.sendVideoNote(chatId, new InputFile(outputVideoPath), {
-        reply_parameters: {
-            message_id: msgId
-        }
-    })
+        await ctx.api.sendVideoNote(chatId, new InputFile(outputVideoPath), {
+            reply_parameters: {
+                message_id: msgId
+            }
+        })
+    } catch (error) {
+        ctx.reply('Хатолик, илтимос қайта урунинг.')
+    }
 
     fs.rmSync(outputVideoPath)
 })

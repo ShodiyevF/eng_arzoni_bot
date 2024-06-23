@@ -4,9 +4,9 @@
   "description": "",
   "main": "src/server.ts",
   "scripts": {
-    "start": "pm2 start dist/server.js --name 'projectName'",
-    "restart": "pm2 restart 'projectName'",
-    "delete": "pm2 delete 'projectName'",
+    "start": "pm2 start dist/server.js --name 'eng_arzoni'",
+    "restart": "pm2 restart 'eng_arzoni'",
+    "delete": "pm2 delete 'eng_arzoni'",
     "start:dev": "nodemon",
     "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
     "migration:generate": "rizzle-kit generate:pg --schema=./src/database/schema.ts",
