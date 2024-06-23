@@ -1,4 +1,5 @@
 import BotContext from "@customTypes/botcontext"
+import statisticsHelper from "@helper/statistics.helper"
 import { Bot } from "grammy"
 
 export function starterScene(bot: Bot<BotContext>) {
@@ -12,5 +13,9 @@ export function starterScene(bot: Bot<BotContext>) {
 
     bot.on('message:document', async ctx => {
         ctx.scenes.enter('videoNote')
+    })
+
+    bot.command('statistics', async ctx => {
+        statisticsHelper(ctx)
     })
 }

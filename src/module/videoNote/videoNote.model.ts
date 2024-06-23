@@ -10,7 +10,7 @@ const scene = new Scene('videoNote')
 let fileTypes = ['mov', 'mp4', 'avi', 'mpg', 'mpeg', 'webm']
 
 scene.step(async ctx => {
-    ctx.reply('Жараён бошланди, илтимос кутиб туиинг!')
+    ctx.reply('Жараён бошланди, илтимос кутиб туринг!')
     
     if (!ctx.update.message?.video && !ctx.update.message?.document) {
         return ctx.reply('Iltimos video yuboring')
